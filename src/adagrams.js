@@ -74,8 +74,8 @@ export const drawLetters = () => {
 
   while(letters.length < HAND_SIZE) {
     let min = 0;
-    let max = availablePool.length - 1;
-    let randomIndex = Math.floor(Math.random() * (max - min + 1)) + min;
+    let max = availablePool.length - 1; 
+    let randomIndex = Math.floor(Math.random() * (max - min + 1)) + min; //random number between min and max (both included)
     letters.push(availablePool.splice(randomIndex, 1)[0]);  //use splice because pop can only remove the last element in JS
   }
   return letters;
