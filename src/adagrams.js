@@ -76,7 +76,7 @@ export const drawLetters = () => {
     let min = 0;
     let max = availablePool.length - 1;
     let randomIndex = Math.floor(Math.random() * (max - min + 1)) + min;
-    letters.push(availablePool.pop(randomIndex));  
+    letters.push(availablePool.splice(randomIndex, 1)[0]);  //use splice because pop can only remove the last element in JS
   }
   return letters;
 
